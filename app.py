@@ -45,6 +45,14 @@ def square(number):
     result = number * number 
     return f'Square is {result}' 
   
+@app.route('/cube/<int:number>') 
+def cube(number): 
+    result = number * number * number 
+    return f'cube of {number} is {result}'
+
+@app.route('/greet/<name>/<int:age>') 
+def greet(name,age): 
+    return f'Hi {name}! You are {age} years old.' 
   
 # Run the app with debug mode ON (shows errors while coding) 
 if __name__ == '__main__': 
