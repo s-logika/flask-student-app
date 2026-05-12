@@ -60,7 +60,7 @@ def triangle(size,symbol):
     for i in range(1, size + 1):
         star = symbol * i
         message=message + star + '\n'
-        print(symbol * i)
+        # print(symbol * i)
     return f'<pre>{message}<pre>'
   
 # Run the app with debug mode ON (shows errors while coding) 
