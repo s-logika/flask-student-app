@@ -52,7 +52,16 @@ def cube(number):
 
 @app.route('/greet/<name>/<int:age>') 
 def greet(name,age): 
-    return f'Hi {name}! You are {age} years old.' 
+    return f'Hi {name}! You are {age} years old.'
+
+@app.route('/triangle/<int:size>/<symbol>') 
+def triangle(size,symbol):
+    message = ''
+    for i in range(1, size + 1):
+        star = symbol * i
+        message=message + star + '\n'
+        print(symbol * i)
+    return f'<pre>{message}<pre>'
   
 # Run the app with debug mode ON (shows errors while coding) 
 if __name__ == '__main__': 
